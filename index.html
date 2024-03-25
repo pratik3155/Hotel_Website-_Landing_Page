@@ -1,207 +1,625 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project - 1 Bootstrap</title>
-    <link rel="icon" href="Images/illustrations/living-room.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Website</title>
+  <link rel="icon" href="Images/illustrations/h-solid.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="body">
- <section class="container-fluid cta">
-    <div class="row">
-        <div class="col-0 col-md-4 col-lg-2 d-none d-lg-block  cta-1">
-           <div class="position-fixed z-3"> 
-        <menu>
-            <li><span class="home-span">Home</span></li>
-            <li>Project</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Blog</li>
-            <li>Contact</li>
-        </menu>
-        <ul class="social">
-            <li><a href="#"class="text-dark ">Facebook</a></li>
-            <li><a href="#"class="text-dark ">Twitter</a></li>
-            <li><a href="#"class="text-dark ">Instagram</a></li>
-        </ul>
-        <div class="logo w-75">
-           <a href="#">KD</a>
-        </div>
-    </div>
-        </div>
-           <div class="col-12 col-md-2 col-lg-10 mt-4 mb-5 d-block d-lg-none  menu-btn" >
-   <button type="button" class="position-fixed  z-3" data-bs-toggle="offcanvas" data-bs-target="#myOffCanvas">
-    <i class="fa-solid fa-bars fs-1" style="color: #000000;"></i>
+
+<body onscroll="handleOnScroll()">
+  <header id="header"
+    class="z-3 d-flex justify-content-between justify-content-lg-evenly align-items-center pt-3 pb-3 position-fixed top-0 start-0 w-100">
+    <a href="" class="logo ms-2 ms-md-2 text-decoration-none rounded  rounded-4">
+      <p class="h3 pt-1 ps-3 pe-3 rounded text-center fw-bold">
+        PATO<span class="d-block mx-auto fw-lighter font14">Restaurent</span>
+      </p>
+    </a>
+    <ul class="navigation d-none d-lg-flex pt-3 list-unstyled">
+      <li class="ms-5"><a href="#" class="font14 text-decoration-none">HOME</a></li>
+      <li class="ms-5"><a href="#" class="font14 text-decoration-none">MENU</a></li>
+      <li class="ms-5"><a href="#" class="font14 text-decoration-none">RESERVATION</a></li>
+      <li class="ms-5"><a href="#" class="font14 text-decoration-none">GALLERY</a></li>
+      <li class="ms-5"><a href="#" class="font14 text-decoration-none">ABOUT</a></li>
+      <li class="ms-5"><a href="#" class="font14 text-decoration-none">BLOG</a></li>
+      <li class="ms-5"><a href="#" class="font14 text-decoration-none">CONTACT</a></li>
+    </ul>
+    <div class="nav-social">
+      <a href="#" class="ps-2 pe-2"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#" class="ps-2 pe-2"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" class="ps-2 pe-2"><i class="fa-brands fa-facebook"></i></a>
+      <button type="button" class="bg-transparent z-3 ps-2 pe-2 " data-bs-toggle="offcanvas"
+        data-bs-target="#myOffCanvas">
+        <i class="fa-solid fa-grip-lines fs-3"></i>
       </button>
     </div>
-    <div id="myOffCanvas" class="offcanvas offcanvas-start w-75  ">
+    <div id="myOffCanvas" class="offcanvas offcanvas-end">
       <div class="offcanvas-body">
         <button class="btn-close float-end" data-bs-dismiss="offcanvas"></button>
-        <ul class="nav flex-column  w-50 ">
-          <li class="nav-item" style="border-bottom: 2px solid var(--span);"><a class="nav-link fs-1 " href="" style="color: var(--span);">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-dark fs-1 " href="">About</a></li>
-          <li class="nav-item"><a class="nav-link text-dark fs-1 " href="">Education</a></li>
-          <li class="nav-item"><a class="nav-link text-dark fs-1 " href="">Skills</a></li>
-          <li class="nav-item"><a class="nav-link text-dark fs-1 " href="">Projects</a></li>
-          <li class="nav-item"><a class="nav-link text-dark fs-1 " href="">Contact</a></li>
+        <ul class="nav flex-column w-50 text-center mx-auto mt-5 pt-5">
+          <li class="nav-item">
+            <a class="nav-link text-dark fs-6" href="">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fs-6" href="">MENU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fs-6" href="">GALLERY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fs-6" href="">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fs-6" href="">BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fs-6" href="">CONTACT</a>
+          </li>
+          <button class="btn bg-black text-light font14 mt-3 rounded pt-2 pb-2">RESERVATION</button>
         </ul>
-        <ul class="social ps-3 ">
-            <li><a href="#"class="text-dark h6">Facebook</a></li>
-            <li><a href="#"class="text-dark h6">Twitter</a></li>
-            <li><a href="#"class="text-dark h6">Instagram</a></li>
-        </ul>
-        <div class="logo w-75">
-            <a href="#">KD</a>
-         </div>
-      </div>
-    </div>
-        <div class="col-12 col-md-10 col-lg-10  cta-2">
-          <h1 class=" mt-2 mb-4">Architects with Need a different design</h1>
-          <p class="lh-lg mb-5 poem ">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <div class="row mb-5 pb-5 stat">
-            <div class="col-12 col-md-3 col-lg-3">
-                <h2>18</h2>
-                <p>Years Of Experience</p>
-            </div>
-            <div class="col-12 col-md-3 col-lg-3">
-                <h2>351</h2>
-                <p>Happy Clients</p>
-            </div>
-            <div class="col-12 col-md-3 col-lg-3">
-                <h2>564</h2>
-                <p>Finished Projects</p>
-            </div>
-            <div class="col-12 col-md-3 col-lg-3">
-                <h2>300</h2>
-                <p>Working days</p>
-            </div>
-        </div>
-        <div class="about mt-5">
-            <h2 class="text-light text-uppercase fw-bold position-absolute">About <span>KD</span> ARCHITECTURE</h2>
-        </div>
-        <div class="row info mb-5 mt-5 pt-5 pb-5">
-            <div class="col-12 col-md-4 col-lg-4">
-                <img src="Images/illustrations/log.png" alt="img">
-                <h2 class="ps-3 text-uppercase mt-3">Perfectly Design</h2>
-                <p class="ps-3 mt-3 lh-lg">Even all the Powerful Pointing has no control about the blind texts it is an almost unorthographic</p>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4">
-                <img src="Images/illustrations/log2.png" alt="img">
-                <h2 class="ps-3 text-uppercase mt-3">Carefully Planned</h2>
-                <p class="ps-3 mt-3 lh-lg">Even all the Powerful Pointing has no control about the blind texts it is an almost unorthographic</p>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4">
-                <img src="Images/illustrations/log3.png" alt="img">
-                <h2 class="ps-3 text-uppercase mt-3">Smartly Execute</h2>
-                <p class="ps-3 mt-3 lh-lg mb-5">Even all the Powerful Pointing has no control about the blind texts it is an almost unorthographic</p>
-            </div>
-        </div>
-        </div>
-    </div>
- </section>
-<section class="container-fluid main pe-0 ps-0">
-    <div class="container-fluid mb-5 d-flex position-relative justify-content-center  class1 img1">
-           <div class="minus  position-absolute w-75 ">
-            <h2 class="text-uppercase text-center">Home Interior Design</h2>
-           </div>
-    </div>
-    <div class="container-fluid mb-5 d-flex  position-relative justify-content-center class1 img2">
-           <div class="minus  position-absolute w-75 ">
-            <h2 class="text-uppercase text-center">Office Interior Design</h2>
-           </div>
-    </div>
-    <div class="container-fluid mb-5 d-flex  position-relative justify-content-center class1 img3">
-           <div class="minus  position-absolute w-75 ">
-            <h2 class="text-uppercase text-center">Apartment Design</h2>
-           </div>
-    </div>
-    <div class="container-fluid mb-5 pe-0 ps-0 position-relative   combine">
-         <div class="row ms-0 me-0 justify-content-between">
-            <div class="col-12 col-md-5 col-lg-6 d-flex justify-content-center img4">
-                <div class="minus  position-absolute ">
-                    <h2 class="text-uppercase text-center">Office Interior Design</h2>
-                   </div>
-            </div>
-            <div class="col-12 col-md-5 col-lg-6 d-flex position-relative justify-content-center img5">
-                <div class="minus  position-absolute ">
-                    <h2 class="text-uppercase text-center">Dining Table</h2>
-                   </div>
-            </div>
-         </div>
-    </div>
-    <div class="container-fluid mb-5 d-flex  position-relative justify-content-center class1 img6">
-        <div class="minus  position-absolute w-75 ">
-         <h2 class="text-uppercase text-center">Apartment  Design</h2>
-        </div>
- </div>
-    </div>
-    <div class="mt5 text-center position-relative view">
-        <h2>VIEW ALL PROJECTS</h2>
-    </div>
-</section>
- <section class="container-fluid position-relative footer">
-   <section class=" container">
-    <div class="row">
-    <div class="col-12 col-md col-lg ps-0 pe-0 pt-5 insta">
-        <h3 class="mb-5 text-light mt-5">Instagram</h3>
-        <div class="design d-flex flex-wrap ">
-            <div><img src="Images/illustrations/work-1.jpg" alt="img"></div>
-            <div><img src="Images/illustrations/work-2.jpg" alt="img"></div>
-            <div><img src="Images/illustrations/work-3.jpg" alt="img"></div>
-            <div><img src="Images/illustrations/work-4.jpg" alt="img"></div>
-            <div><img src="Images/illustrations/work-5.jpg" alt="img"></div>
-            <div><img src="Images/illustrations/work-6.jpg" alt="img"></div>
-        </div>
-    </div>
-    <div class="col-12 col-md col-lg pt-5  ps-0 pe-0 links">
-        <h3 class="mb-5 text-light mt-5">Links</h3>
-        <ul class="ps-0 pe-0">
-            <li class="mb-3 "><a href="#" class="text-secondary">Home</a></li>
-            <li class="mb-3 "><a href="#" class="text-secondary">Projects</a></li>
-            <li class="mb-3 "><a href="#" class="text-secondary">Blog</a></li>
-            <li class="mb-3 "><a href="#" class="text-secondary">Services</a></li>
-            <li class="mb-3 "><a href="#" class="text-secondary">Contact</a></li>
-        </ul>
-    </div>
-    <div class="col-12 col-md col-lg pt-5  ps-0 pe-0 arch">
-        <h3 class="text-light mb-5 mt-5">Archieves</h3>
-      <div class="row ps-0 pe-0">
-        <div class="col-6 col-md  ps-0 pe-0 col-lg">
-            <ul class="ps-0 pe-0">
-               <li class="text-light mb-3">June 2019</li>
-                <li class="text-light mb-3">July 2018</li>
-                <li class="text-light mb-3">Feb 2023</li>
-                <li class="text-light mb-3">April 2022</li>
-                <li class="text-light mb-3">May 2021</li>
-               </ul>
-        </div>
-        <div class="col-6 col-md col-lg text-end ps-0 pe-0 archieves">
-            <ul> 
-               <li class="mb-3"><a href="#">(20)</a></li>
-               <li class="mb-3"><a href="#">(20)</a></li>
-               <li class="mb-3"><a href="#">(22)</a></li>
-               <li class="mb-3"><a href="#">(23)</a></li>
-               <li class="mb-3"><a href="#">(22)</a></li>
-               </ul>
+        <h3 class="text-center h5 mt-5">Gallery</h3>
+        <div class="offcanvas-design d-flex flex-wrap mt-5 column-gap-3 justify-content-center">
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-01.jpg" alt=""
+              style="width: 75px; height: 80px;"></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-02.jpg" alt=""
+              style="width: 75px; height: 80px;"></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-03.jpg" alt=""
+              style="width: 75px; height: 80px;"></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-10.jpg" alt=""
+              style="width: 75px; height: 80px;"></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/our-story-01.jpg" alt=""
+              style="width: 75px; height: 80px;"></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-01.jpg" alt=""
+              style="width: 75px; height: 80px;"></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-thumb-03.jpg" alt=""
+              style="width: 75px; height: 80px;"></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/our-menu-05.jpg" alt=""
+              style="width: 75px; height: 80px;"></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-10.jpg" alt=""
+              style="width: 75px; height: 80px;"></div>
         </div>
       </div>
     </div>
-    <div class="col-12 col-md col-lg query pt-5  ps-0 pe-0   ques">
-        <h3 class="text-light mb-5 mt-5">Have A Question?</h3>
-       <p class="text-secondary ps-3"> <i class="fa-solid fa-location-dot text-light"></i>  Demo@ demo d ece0ecmdvdif</p>
-       <p class="ps-3"> <i class="fa-solid fa-phone"></i>  +495039592040</p>
-        <p class="ps-3"> <i class="fa-solid fa-envelope"></i>  Demo@gmail.com</p>
+  </header>
+  <section class="container-fluid ps-0 pe-0 mb-5 slidesec">
+    <section class="carousel slide" id="myCarousel" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active rounded-circle"
+          style="height: 10px; width: 10px"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="active rounded-circle"
+          style="height: 10px; width: 10px"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class="active rounded-circle"
+          style="height: 10px; width: 10px"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active main-slide-1 pt-5 background-properties">
+          <div class="text-center text-light mt-5 pt-5">
+            <h2 class="mt-5 tophead rotate-in-2-bl-cw display-3">Welcome to</h2>
+            <h1 class="tophead2 slide-in-right display-1 fw-bold">PATO PLACE</h1>
+            <button class="btn  scale-in-center menu-1 font14">LOOK MENU</button>
+          </div>
+        </div>
+        <div class="carousel-item main-slide-2 pt-5 background-properties">
+          <div class="text-center text-light mt-5 pt-5">
+            <h2 class="mt-5 tophead rotate-in-2-bl-cw display-3">Welcome to</h2>
+            <h1 class="tophead2 slide-in-right  display-1 fw-bold">PATO PLACE</h1>
+            <button class="btn   scale-in-center  menu-1 font14">LOOK MENU</button>
+          </div>
+        </div>
+        <div class="carousel-item main-slide-3 pt-5 background-properties">
+          <div class="text-center text-light mt-5 pt-5">
+            <h2 class="mt-5 tophead rotate-in-2-bl-cw display-3">Welcome to</h2>
+            <h1 class="tophead2 slide-in-right  display-1 fw-bold">PATO PLACE</h1>
+            <button class="btn   scale-in-center  menu-1 font14">LOOK MENU</button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="carousel-control-prev d-none d-lg-block" data-bs-target="#myCarousel"
+        data-bs-slide="prev">
+        <div class="rounded-circle"><i class="fa-solid fa-chevron-left fs-1 text-light"></i></div>
+      </button>
+      <button type="button" class="carousel-control-next d-none d-lg-block" data-bs-target="#myCarousel"
+        data-bs-slide="next">
+        <div class="rounded-circle"><i class="fa-solid fa-chevron-right fs-1 text-light"></i></div>
+      </button>
+    </section>
+  </section>
+  <section class="container row welcome-section mx-auto text-center mb-5">
+    <div class="col-12 col-md-6 pt-5">
+      <h3 class="tophead text-danger mt-5">Italian Restaurant</h3>
+      <h2 class="tophead2 display-4 fw-bold">WELCOME</h2>
+      <p>Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia,
+        nisl ante egestas mi, ac facilisis ligula sem id neque.</p>
+      <button class="font14 bg-light story-btn">OUR STORY <i class="fa-solid fa-arrow-right"></i></button>
     </div>
-</div>
-<div class="end  mt-5 pb-5">
-    <p class="text-secondary">Copyright ©2024 All rights reserved | This template is made with <i class="fa-solid fa-heart" style="color: #7d7d7d;"></i>  by Colorlib
-    </p>
-</div>
-   </section>
- </section>
-<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="col-12 col-md-6 mt-5 mb-5 pb-5 ">
+      <img src="Images/illustrations/our-story-01.jpg" alt="img" class=" rounded-4 welcome-img ">
+    </div>
+  </section>
+  <section class="discover-sec d-flex align-items-center background-properties">
+    <div class="mx-auto text-center">
+      <h4 class="tophead text-danger h2">Discover</h4>
+      <h2 class="tophead2 text-light display-4 fw-bold">P A T O _ P L A C E</h2>
+    </div>
+  </section>
+  <section class="row container intro-1 mx-auto mt-5 ps-0 pe-0 pb-5">
+    <div class="col-12 col-md-4 mt-5">
+      <div class="overflow-hidden rounded-4"><img src="Images/illustrations/intro-01.jpg" alt="img"></div>
+      <div class="mt-4">
+        <h4>ROMANTIC RESTAURENT</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur a vitae et, odit tempore?
+        </p>
+        <button class="font14 bg-light">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mt-5">
+      <div class="overflow-hidden rounded-4"><img src="Images/illustrations/intro-02.jpg" alt="img"></div>
+      <div class="mt-4">
+        <h4>Delicious Food</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur a vitae et, odit tempore?
+        </p>
+        <button class="font14 bg-light">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mt-5">
+      <div class="overflow-hidden rounded-4"><img src="Images/illustrations/intro-04.jpg" alt="img"></div>
+      <div class="mt-4">
+        <h4>Red Wines You Love</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur a vitae et, odit tempore?
+        </p>
+        <button class="font14 bg-light">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+  <section class="design-bg">
+    <section class="container-fluid mt-5 pt-5">
+      <div class="mx-auto text-center pt-5">
+        <h4 class="tophead text-danger h2">Discover</h4>
+        <h2 class="tophead2 display-4 fw-bold">OUR MENU</h2>
+      </div>
+    </section>
+    <section class="container mt-5 pb-5 ">
+      <div class="row  img-design-sec pb-5">
+        <div class="col-12 col-md-8 col-lg-8">
+          <div class="row box-last">
+            <div
+              class="col-12 col-md box1 background-properties rounded-4 d-flex justify-content-center align-items-center  me-5">
+              <button class="btn rounded-4 light-gradient fs-3 design-img-btn ">LUNCH</button>
+            </div>
+            <div
+              class="col-12 col-md box1 sec-box background-properties  rounded-4  mt-5 mt-md-0  d-flex justify-content-center align-items-center ">
+              <button class="btn rounded-4  light-gradient  fs-3 design-img-btn">DINNER</button>
+            </div>
+          </div>
+          <div
+            class="box background-properties  rounded-4 bottom-box  d-flex justify-content-center align-items-center">
+            <button class="btn rounded-4  light-gradient design-img-btn fs-3 ">HAPPY HOUR</button>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-4">
+          <div class="box background-properties  rounded-4  d-flex justify-content-center align-items-center">
+            <button class="btn rounded-4  light-gradient design-img-btn fs-3 ">DRINK</button>
+          </div>
+          <div class="box box-sec background-properties  rounded-4  d-flex justify-content-center align-items-center">
+            <button class="btn rounded-4 light-gradient design-img-btn fs-3 ">STARTERS</button>
+          </div>
+          <div class="box box-sec2 background-properties  rounded-4  d-flex justify-content-center align-items-center">
+            <button class="btn rounded-4  light-gradient design-img-btn fs-3 ">DESERT</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid mt-5  mb-5 ps-0 pe-0 second-slidesec">
+      <section class="carousel slide mb-5 pt-5" id="myCarousel-new" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel-new" data-bs-slide-to="0" class="active rounded-circle"
+            style="height: 10px; width: 10px"></button>
+          <button type="button" data-bs-target="#myCarousel-new" data-bs-slide-to="1" class="active rounded-circle"
+            style="height: 10px; width: 10px"></button>
+          <button type="button" data-bs-target="#myCarousel-new" data-bs-slide-to="2" class="active rounded-circle"
+            style="height: 10px; width: 10px"></button>
+        </div>
+        <div class="carousel-inner  pb-5 mb-5">
+          <div class="carousel-item active sec-slide-1 background-properties pt-5 ">
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="text-light text-center pt-5">
+                <h4 class="tophead text-danger h2">Upcoming</h4>
+                <h3 class="tophead2 display-4 fw-bold">E V E N T S</h3>
+                <div class="row container pb-5 mx-auto mb-5 pt-3 pt-md-5 pb-5 sec0 slide-in-right">
+                  <div
+                    class="col-12 col-md-12 col-lg-1 bg-danger text-light  hori-sec text-center d-flex justify-content-center align-items-center font14 rounded-top rounded-lg-start">
+                    8:00 PM Tuesday - 21 November 2018</div>
+                  <div class="col-12 col-md-12 col-lg-5 ps-0 pe-0">
+                    <img src="Images/illustrations/event-01.jpg" alt="img">
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-6 bg-light text-dark rounded-end ps-0 pe-0">
+                    <h3 class="fs-5 mt-5">WINES DURING SPECIFIC NIGHTS</h3>
+                    <P class="pt-3 pb-3">Lorem ipsum, dolor sit amet consectetur adipisicing
+                      sed consequatur corporis quis quos nulla accusamus</P>
+                    <div class="row flex-wrap ps-3 pe-3">
+                      <p class="col-6 col-md-3 display-5 fw-bold text-danger">25<span
+                          class="d-block fw-lighter text-secondary">DAYS</span></p>
+                      <p class="col-6 col-md-3 display-5 fw-bold text-danger">12<span
+                          class="d-block fw-lighter text-secondary">HOURS</span></p>
+                      <p class="col-6 col-md-3 display-5 fw-bold text-danger">37<span
+                          class="d-block fw-lighter text-secondary">MINUTES</span></p>
+                      <p class="col-6 col-md-3 display-5 fw-bold text-danger"><span
+                          class=" display-5 fw-bold text-danger" id="seconds"></span> <span
+                          class="d-block fw-lighter text-secondary">SECONDS</span>
+                      </p>
+                    </div>
+                    <button class="font14 bg-light mt-3 mb-5 detail-btn">VIEW DETAILS <i
+                        class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item sec-slide-2 background-properties pt-5">
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="text-light text-center pt-5">
+                <h4 class="tophead text-danger h2">Upcoming</h4>
+                <h3 class="tophead2 display-4 fw-bold">E V E N T S</h3>
+                <div class="row container pb-5 mx-auto mb-5 pt-3 pt-md-5 pb-5 sec0 rotate-in-2-bl-cw ">
+                  <div
+                    class="col-12 col-md-12 col-lg-1 bg-danger text-light  hori-sec text-center d-flex justify-content-center align-items-center font14 rounded-top rounded-lg-start">
+                    8:00 PM Tuesday - 21 November 2018</div>
+                  <div class="col-12 col-md-12 col-lg-5 ps-0 pe-0">
+                    <img src="Images/illustrations/event-06.jpg" alt="img">
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-6 bg-light text-dark rounded-end ps-0 pe-0">
+                    <h3 class="fs-5 mt-5">WINES DURING SPECIFIC NIGHTS</h3>
+                    <P class="pt-3 pb-3">Lorem ipsum, dolor sit amet consectetur adipisicing
+                      sed consequatur corporis quis quos nulla accusamus</P>
+                    <div class="row flex-wrap ps-3 pe-3">
+                      <p class="col-6 col-md-3 display-5 fw-bold text-danger">25<span
+                          class="d-block fw-lighter text-secondary">DAYS</span></p>
+                      <p class="col-6 col-md-3 display-5 fw-bold text-danger">12<span
+                          class="d-block fw-lighter text-secondary">HOURS</span></p>
+                      <p class="col-6 col-md-3 display-5 fw-bold text-danger">37<span
+                          class="d-block fw-lighter text-secondary">MINUTES</span></p>
+                      <p class="col-6 col-md-3 display-5 fw-bold text-danger"><span
+                          class=" display-5 fw-bold text-danger" id="seconds2"></span> <span
+                          class="d-block fw-lighter text-secondary">SECONDS</span>
+                      </p>
+                    </div>
+                    <button class="font14 bg-light mt-3 mb-5 detail-btn">VIEW DETAILS <i
+                        class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item sec-slide-3 background-properties pt-5">
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="text-light text-center pt-5">
+                <h4 class="tophead text-danger h2">Upcoming</h4>
+                <h3 class="tophead2 display-4 fw-bold">E V E N T S</h3>
+                <div class="row container pb-5 mx-auto mb-5 pt-3 pt-md-5  pb-5 sec0 scale-in-center">
+                  <div
+                    class="col-12 col-md-12 col-lg-1 bg-danger text-light  hori-sec text-center d-flex justify-content-center align-items-center font14 rounded-top ">
+                    8:00 PM Tuesday - 21 November 2018</div>
+                  <div class="col-12 col-md-12 col-lg-5 ps-0 pe-0">
+                    <img src="Images/illustrations/event-02.jpg" alt="img">
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-6 bg-light text-dark rounded-end ps-0 pe-0 ">
+                    <h3 class="fs-5 mt-5">WINES DURING SPECIFIC NIGHTS</h3>
+                    <P class="pt-3 pb-3">Lorem ipsum, dolor sit amet consectetur adipisicing
+                      sed consequatur corporis quis quos nulla accusamus</P>
+                    <div class="row flex-wrap ps-3 pe-3">
+                      <p class="col-6 col-md-3 display-5 fw-bold text-danger">25<span
+                          class="d-block fw-lighter text-secondary">DAYS</span></p>
+                      <p class="col-6 col-md-3 display-5 fw-bold text-danger">12<span
+                          class="d-block fw-lighter text-secondary">HOURS</span></p>
+                      <p class="col-6 col-md-3 display-5 fw-bold text-danger">37<span
+                          class="d-block fw-lighter text-secondary">MINUTES</span></p>
+                      <p class="col-6 col-md-3 display-5 fw-bold text-danger"><span
+                          class=" display-5 fw-bold text-danger" id="seconds3"></span> <span
+                          class="d-block fw-lighter text-secondary">SECONDS</span>
+                      </p>
+                    </div>
+                    <button class="font14 bg-light mt-3 mb-5 detail-btn">VIEW DETAILS <i
+                        class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="carousel-control-prev d-none d-lg-block" data-bs-target="#myCarousel-new"
+          data-bs-slide="prev">
+          <div class="rounded-circle"><i class="fa-solid fa-chevron-left fs-1 text-light"></i></div>
+        </button>
+        <button type="button" class="carousel-control-next d-none d-lg-block" data-bs-target="#myCarousel-new"
+          data-bs-slide="next">
+          <div class="rounded-circle"><i class="fa-solid fa-chevron-right fs-1 text-light"></i></div>
+        </button>
+      </section>
+    </section>
+    <section class="reservation-form ">
+      <div class="row container mx-auto">
+        <div class="col-12 col-lg-6  ">
+          <div class="mx-auto text-center pt-5">
+            <h4 class="tophead text-danger h2">Reservation</h4>
+            <h2 class="tophead2 display-4 fw-bold">BOOK TABLE</h2>
+          </div>
+          <div class="row flex-wrap pb-5 row-gap-4 pt-5">
+            <div class=" col-12 col-md-6">
+              <label for="#" class="form-label">Date</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="#" class="form-label">Name</label>
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="#" class="form-label">Time</label>
+              <input type="time" class="form-control">
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="#" class="form-label">Phone</label>
+              <input type="tel" class="form-control" placeholder="Phone">
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="#" class="form-label">People</label>
+              <select name="select-person" id="person" class="form-control">
+                <option value="1">1 Person</option>
+                <option value="2">2 Person</option>
+                <option value="3">3 Person</option>
+                <option value="4">4 Person</option>
+                <option value="5">5 Person</option>
+                <option value="6">6 Person</option>
+                <option value="7">7 Person</option>
+                <option value="8">8 Person</option>
+                <option value="9">9 Person</option>
+                <option value="10">10 Person</option>
+                <option value="11">11 Person</option>
+                <option value="12">12 Person</option>
+                <option value="13">13 Person</option>
+                <option value="14">14 Person</option>
+                <option value="15">15 Person</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="#" class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+          </div>
+          <button class="btn book-table-btn d-block mx-auto mb-5 font14">BOOK TABLE</button>
+        </div>
+        <div class="col-12 col-lg-6 pb-5 pt-lg-5 overflow-hidden ">
+          <img src="Images/illustrations/booking-01.jpg" alt="img"
+            class="reserv-img  rounded-4 h-auto d-block mt-lg-5 mx-auto ">
+        </div>
+      </div>
+    </section>
+  </section>
+  <section class="review-sec mt-5 mb-5">
+    <div class="mx-auto text-center pt-5">
+      <h4 class="tophead text-danger h2">Customers Say</h4>
+      <h2 class="tophead2 display-4 fw-bold">R E V I E W</h2>
+    </div>
+    <section class="carousel slide pb-5" id="review-Carousel" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#review-Carousel" data-bs-slide-to="0"
+          class="active rounded-circle bg-secondary" style="height: 10px; width: 10px"></button>
+        <button type="button" data-bs-target="#review-Carousel" data-bs-slide-to="1"
+          class="active rounded-circle bg-secondary" style="height: 10px; width: 10px"></button>
+        <button type="button" data-bs-target="#review-Carousel" data-bs-slide-to="2"
+          class="active rounded-circle bg-secondary" style="height: 10px; width: 10px"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active pt-5 ">
+          <div class="bg-danger  review-img-div mx-auto rounded-circle overflow-auto border border-5 border-danger">
+            <img src="Images/illustrations/avatar-01.jpg" alt="img ">
+          </div>
+          <p class="text-center w-75 mx-auto pt-5 lh-lg fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis repellat minus sapiente accusantium aspernatur! Fugiat ratione laudantium, aliquam, commodi
+            architecto natus optio animi maxime modi praesentium provident accusantium nostrum amet?</p>
+          <span class="d-block mx-auto text-center">
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+          </span>
+          <span class="d-block font14 text-center pt-3 pb-5">MARIE SIMMONS - NEW YORK</span>
+        </div>
+        <div class="carousel-item  pt-5">
+          <div class="bg-danger  review-img-div mx-auto rounded-circle overflow-auto border border-5 border-danger">
+            <img src="Images/illustrations/avatar-05.jpg" alt="img ">
+          </div>
+          <p class="text-center w-75 mx-auto pt-5 lh-lg fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis repellat minus sapiente accusantium aspernatur! Fugiat ratione laudantium, aliquam, commodi
+            architecto natus optio animi maxime modi praesentium provident accusantium nostrum amet?</p>
+          <span class="d-block mx-auto text-center">
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+          </span>
+          <span class="d-block font14 text-center pt-3 pb-5">MARIE SIMMONS - NEW YORK</span>
+        </div>
+        <div class="carousel-item  pt-5">
+          <div class="bg-danger  review-img-div mx-auto rounded-circle overflow-auto border border-5 border-danger">
+            <img src="Images/illustrations/avatar-04.jpg" alt="img ">
+          </div>
+          <p class="text-center w-75 mx-auto pt-5 lh-lg fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis repellat minus sapiente accusantium aspernatur! Fugiat ratione laudantium, aliquam, commodi
+            architecto natus optio animi maxime modi praesentium provident accusantium nostrum amet?</p>
+          <span class="d-block mx-auto text-center">
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+            <i class="fa-solid fa-star" style="color: #ff0f0f;"></i>
+          </span>
+          <span class="d-block font14 text-center pt-3 pb-5">MARIE SIMMONS - NEW YORK</span>
+        </div>
+      </div>
+      <button type="button" class="carousel-control-prev d-none d-lg-block" data-bs-target="#review-Carousel"
+        data-bs-slide="prev">
+        <div class="rounded-circle bg-black text-center mx-auto" style="height: 50px;  width: 50px;"><i
+            class="fa-solid fa-chevron-left fs-5 text-light pt-3"></i></div>
+      </button>
+      <button type="button" class="carousel-control-next d-none d-lg-block" data-bs-target="#review-Carousel"
+        data-bs-slide="next">
+        <div class="rounded-circle bg-black text-center mx-auto" style="height: 50px;  width: 50px;"><i
+            class="fa-solid fa-chevron-right fs-5 text-light pt-3"></i></div>
+      </button>
+    </section>
+  </section>
+  <section class="video-sec d-flex justify-content-center align-items-center mb-5">
+    <div class="mx-auto text-center pt-5 col-12">
+      <h4 class="tophead text-danger h2">Discover</h4>
+      <h2 class="tophead2 display-4 text-light fw-bold">OUR VIDEO</h2>
+      <a href="https://youtu.be/5k1hSu2gdKE" target="_blank" class="text-decoration-none video-anchor">
+        <div class="video-play mx-auto rounded-circle d-flex align-items-center justify-content-center mt-5"><i
+            class="fa-solid fa-play fs-3"></i></div>
+    </div></a>
+  </section>
+  <section class="blog-section">
+    <div class="mx-auto text-center pt-5 col-12">
+      <h4 class="tophead text-danger h2">Latest News</h4>
+      <h2 class="tophead2 display-4  fw-bold">THE BLOG</h2>
+    </div>
+    <section class="row container intro-1 mx-auto mt-5 ps-0 pe-0 pb-5">
+      <div class="col-12 col-md-4 mt-5">
+        <div class="position-relative overflow-hidden  rounded "><img src="Images/illustrations/blog-01.jpg"
+            class="rounded" alt="img">
+          <span
+            class="text-light bg-black bg-gradient bg-opacity-50 ps-2 pe-2 position-absolute bottom-0 start-0 ms-2 mb-2 font14">12
+            DEC 2017</span>
+        </div>
+        <div class="mt-4">
+          <h4>BEST PLACES FOR WINE</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur a vitae et, odit tempore?
+          </p>
+          <button class="font14 bg-light">Continue Reading <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mt-5">
+        <div class="position-relative overflow-hidden  rounded "><img src="Images/illustrations/blog-02.jpg"
+            class="rounded" alt="img">
+          <span
+            class="text-light bg-black bg-gradient bg-opacity-50 ps-2 pe-2 position-absolute bottom-0 start-0 ms-2 mb-2 font14">12
+            DEC 2017</span>
+        </div>
+        <div class="mt-4">
+          <h4>EGGS AND CHEESE</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur a vitae et, odit tempore?
+          </p>
+          <button class="font14 bg-light">Continue Reading <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mt-5">
+        <div class="position-relative overflow-hidden  rounded "><img src="Images/illustrations/blog-03.jpg"
+            class="rounded" alt="img">
+          <span
+            class="text-light bg-black bg-gradient bg-opacity-50 ps-2 pe-2 position-absolute bottom-0 start-0 ms-2 mb-2 font14">12
+            DEC 2017</span>
+        </div>
+        <div class="mt-4">
+          <h4>STYLE THE WEDDING PARTY</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur a vitae et, odit tempore?
+          </p>
+          <button class="font14 bg-light">Continue Reading <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section class="sign-up-sec pt-5 pb-5  d-flex align-items-center">
+    <div class="row container mx-auto text-center email-row">
+      <div class="col-12 col-lg-4">
+        <span class="fs-3  tophead2 mt-lg-4 d-lg-block">SPECIALS SIGN UP</span>
+      </div>
+      <div class="col-12 col-lg-5 mt-3 ">
+        <div class="position-relative d-inline-block mt-1 w-100 ">
+          <input type="email" placeholder="Email Address" class=" rounded pt-3 pb-3 ps-4 pe-5 font14 w-100">
+          <i class="fa-solid fa-envelope fs-4 position-absolute top-0 end-0 mt-3 me-2 "></i>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3 mt-4">
+        <button class="btn ps-5 pe-5 font14 book-table-btn pt-2 pb-2 mt-1">SIGN UP</button>
+      </div>
+    </div>
+  </section>
+  <section class="footer-1">
+    <div class="row container mx-auto">
+      <div class="col-12 col-md-4 mb-5 mt-5">
+        <div class="contact-us text-light pt-3">
+          <h5>CONTACT US</h5>
+          <p class="font14 pt-3 footer-color"><span><i class="fa-solid fa-location-dot"></i></span> : 8th floor, 379
+            Hudson St, New
+            York, NY 10018</p>
+          <p class="font14 footer-color"><span><i class="fa-solid fa-phone"></i></span> : (+1) 9593858302</p>
+          <p class="font14 footer-color"><span><i class="fa-solid fa-envelope"></i></span> : demo@gmail.com</p>
+        </div>
+        <div class="opening-time text-light mt-5 pt-3 ">
+          <h5>Openning Hours</h5>
+          <p class="font14 pt-3 footer-color"> 09:30 AM - 11:00 PM <br /> Every Day</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mt-5 mb-5">
+        <h5 class="text-light pt-3 pb-3">LATEST TWITTER</h5>
+        <p class=" font14 footer-color"><i class="fa-brands fa-twitter"></i> <span class="text-danger">@colorlib</span>
+          <br />
+          Activello is a good option. It has a slider built into that displays the featured image in the slider. <a
+            class="text-danger">
+            https://buff.ly/2zaSfAQ</a>
+          <br />
+          <span class="font14 d-block pt-3">21 DEC 2017</span>
+        </p>
+        <p class=" font14 footer-color"><i class="fa-brands fa-twitter"></i> <span class="text-danger">@colorlib</span>
+          <br />
+          Activello is a good option. It has a slider built into that displays the <a class="text-danger">
+            https://buff.ly/2zaSfAQ</a>
+          <br />
+          <span class="font14 d-block pt-3">21 DEC 2017</span>
+        </p>
+      </div>
+      <div class="col-12 col-md-4 mt-5 mb-5">
+        <h5 class="text-light pt-3">GALLERY</h5>
+        <div class="offcanvas-design-2 d-flex flex-wrap mt-3 column-gap-3">
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-01.jpg" alt=""></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-02.jpg" alt=""></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-03.jpg" alt=""></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-10.jpg" alt=""></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/our-story-01.jpg" alt=""></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-01.jpg" alt=""></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-thumb-03.jpg" alt=""></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-thumb-03.jpg" alt=""></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-10.jpg" alt=""></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-12.jpg" alt=""></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-thumb-07.jpg" alt=""></div>
+          <div class="pt-2 pb-2"><img src="Images/illustrations/photo-gallery-10.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer-2  d-md-flex justify-content-around">
+    <div class="text-light pt-3  mb-3 l-sp2 ">
+      <span><i class="fa-brands fa-x-twitter"></i></span>
+      <span class="ps-2 pe-2"><i class="fa-brands fa-facebook"></i></span>
+      <span><i class="fa-brands fa-twitter"></i></span>
+    </div>
+    <div class="text-light pt-3  mb-3 ">
+      <p class="font14 footer-color">@ 2017 Colorlib. <span class="l-sp"> Get The Theme</span></p>
+    </div>
+  </section>
+  <div>
+    <a href="#" target="_top" class="text-light text-decoration-none position-fixed top-button " id="top-btn">
+      <div class=" bg-gradient bg-opacity-50 d-flex align-items-center justify-content-center mt-5 rounded-2"
+        style="height: 40px ; width: 40px;"><i class="fa-solid fa-angles-up"></i></div>
+  </div></a>
+  </div>
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./script.js"></script>
 </body>
+
 </html>
